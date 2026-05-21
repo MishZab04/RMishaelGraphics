@@ -5,7 +5,7 @@ const path = require("path");
 sharp.cache(false);
 sharp.concurrency(1);
 
-const inputDir = "public/portfolio";
+const inputDir = "public/porfolio";
 const outputDir = "public/optimized";
 
 function getImages(dir) {
