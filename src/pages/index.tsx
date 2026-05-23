@@ -4,6 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
+import About from "@/components/About";
+import Portfolio from "@/components/Portfolio";
+import Testimonials from "@/components/Testimonials";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   const { theme, resolvedTheme } = useTheme();
@@ -58,17 +62,20 @@ export default function Home() {
 
   return (
     <main
-      className={`min-h-screen overflow-hidden transition-colors duration-500 ${
+      className={`min-h-screen overflow-x-hidden transition-colors duration-500 ${
         isDark ? "bg-[#050018] text-white" : "bg-white text-gray-900"
       }`}
     >
-      <section className="mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-between gap-16 px-6 py-20 lg:flex-row">
-
+      {/* ── HERO SECTION ── */}
+      <section
+        id="home"
+        className="mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-between gap-16 px-6 py-20 lg:flex-row"
+      >
         {/* LEFT SIDE */}
         <div className="flex-1">
           <h1 className="leading-none tracking-tight">
 
-            {/* ✅ FIX 1: "I am" — theme-aware color */}
+            {/* "I am" — theme-aware */}
             <span
               className={`block text-2xl md:text-3xl font-inter ${
                 isDark ? "text-white" : "text-gray-800"
@@ -77,7 +84,7 @@ export default function Home() {
               I am
             </span>
 
-            {/* ✅ FIX 2: "Mishael Zabud" — Great Vibes curly font */}
+            {/* Name — Great Vibes curly font */}
             <span
               className="font-great-vibes block mt-2 text-[#6C63FF]"
               style={{ fontSize: "clamp(3.5rem, 9vw, 7rem)", lineHeight: 1.15 }}
@@ -85,7 +92,7 @@ export default function Home() {
               Mishael Zabud
             </span>
 
-            {/* ✅ FIX 3: Typing roles — theme-aware color */}
+            {/* Typing roles — theme-aware */}
             <span
               className={`block mt-6 text-base md:text-lg font-inter ${
                 isDark ? "text-gray-300" : "text-gray-600"
@@ -97,7 +104,7 @@ export default function Home() {
 
           </h1>
 
-          {/* ✅ FIX 4: Description — theme-aware color */}
+          {/* Description — theme-aware */}
           <p
             className={`mt-10 max-w-xl text-lg leading-8 md:text-xl ${
               isDark ? "text-gray-400" : "text-gray-700"
@@ -110,14 +117,15 @@ export default function Home() {
           {/* BUTTONS */}
           <div className="mt-12 flex flex-wrap items-center gap-6">
 
+            {/* ✅ FIX: anchor link to #portfolio section, not /portfolio page */}
             <Link
-              href="/portfolio"
+              href="#portfolio"
               className="rounded-full bg-[#6C63FF] px-8 py-4 text-lg font-medium text-white transition duration-300 hover:scale-105 hover:bg-[#7d75ff]"
             >
               View My Portfolio →
             </Link>
 
-            {/* ✅ FIX 5: "Contact Me" — theme-aware color */}
+            {/* Contact Me — opens WhatsApp */}
             <a
               href="https://wa.me/237676665670"
               target="_blank"
@@ -170,6 +178,13 @@ export default function Home() {
         </div>
 
       </section>
+
+      {/* ── ALL SECTIONS (single page) ── */}
+      <About />
+      <Portfolio />
+      <Testimonials />
+      <Contact />
+
     </main>
   );
 }
