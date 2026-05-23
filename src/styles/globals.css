@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 @import "tailwindcss";
 
 /* ===== ROOT VARIABLES ===== */
@@ -20,7 +21,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* ===== CUSTOM FONT ===== */
+/* ===== CUSTOM FONTS ===== */
 @font-face {
   font-family: "Chestta Vissto";
   src: url("/fonts/Chestta-Vissto.ttf") format("truetype");
@@ -29,7 +30,11 @@ body {
   font-display: swap;
 }
 
-/* ===== OPTIONAL UTILITY CLASS (IMPORTANT) ===== */
+/* ===== UTILITY CLASSES ===== */
 .font-chestta {
   font-family: "Chestta Vissto", sans-serif;
+}
+
+.font-great-vibes {
+  font-family: "Great Vibes", cursive;
 }
