@@ -75,6 +75,10 @@ const categories = [
       "/portfolio/church/church26.jpg",
       "/portfolio/church/church27.png",
       "/portfolio/church/church28.png",
+      "/portfolio/church/church29.jpg",
+      "/portfolio/church/church30.jpg",
+      "/portfolio/church/church31.png",
+      "/portfolio/church/church32.png",
       // continue adding: "/portfolio/church/church7.jpg", ...
     ],
   },
@@ -141,6 +145,11 @@ const categories = [
       "/portfolio/portrait/potrait54.jpg",
       "/portfolio/portrait/potrait55.jpg",
       "/portfolio/portrait/potrait56.jpg",
+      "/portfolio/portrait/potrait57.jpg",
+      "/portfolio/portrait/potrait58.jpg",
+      "/portfolio/portrait/potrait59.jpg",
+      "/portfolio/portrait/potrait60.jpg",
+      "/portfolio/portrait/potrait61.jpg",
     ],
   },
   {
@@ -188,6 +197,10 @@ const categories = [
       "/portfolio/business/business34.jpg",
       "/portfolio/business/business35.jpg",
       "/portfolio/business/business36.jpg",
+      "/portfolio/business/business37.jpg",
+      "/portfolio/business/business38.jpg",
+      "/portfolio/business/business39.jpg",
+      "/portfolio/business/business40.jpg",
     ],
   },
   {
@@ -220,6 +233,8 @@ const categories = [
       "/portfolio/birthday/birthday19.jpg",
       "/portfolio/birthday/birthday20.jpg",
       "/portfolio/birthday/birthday21.jpg",
+      "/portfolio/birthday/birthday22.jpg",
+      "/portfolio/birthday/birthday23.jpg",
     ],
   },
   {
@@ -244,6 +259,9 @@ const categories = [
       "/portfolio/funeral/funeral11.jpg",
       "/portfolio/funeral/funeral12.jpg",
       "/portfolio/funeral/funeral13.jpg",
+      "/portfolio/funeral/funeral14.jpg",
+      "/portfolio/funeral/funeral15.jpg",
+      "/portfolio/funeral/funeral16.jpg",
     ],
   },
   {
@@ -353,6 +371,7 @@ const categories = [
       "/portfolio/banners/banner6.jpg",
       "/portfolio/banners/banner7.jpg",
       "/portfolio/banners/banner8.jpg",
+      "/portfolio/banners/banner9.jpg",
     ],
   },
   {
@@ -397,6 +416,7 @@ const categories = [
       "/portfolio/logos/logo13.jpg",
       "/portfolio/logos/logo14.jpg",
       "/portfolio/logos/logo15.jpg",
+      "/portfolio/logos/logo16.jpg",
     ],
   },
   {
@@ -411,6 +431,7 @@ const categories = [
       "/portfolio/bookcovers/bookcover2.jpg",
       "/portfolio/bookcovers/bookcover3.jpg",
       "/portfolio/bookcovers/bookcover4.jpg",
+      "/portfolio/bookcovers/bookcover5.jpg",
     ],
   },
 ];
