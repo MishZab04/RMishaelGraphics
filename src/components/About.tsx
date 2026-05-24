@@ -118,12 +118,12 @@ const services = [
     desc: "Wood, Glass, Acrylic, Motivational frames.",
     img: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=400&q=80",
   },
-{
-  icon: "▶",
-  title: "Video Editing",
-  desc: "Cinematic, engaging, story-driven edits crafted to captivate audiences and bring visuals to life.",
-  img: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=400&q=80",
-},
+  {
+    icon: "▶",
+    title: "Video Editing",
+    desc: "Cinematic, engaging, story-driven edits crafted to captivate audiences and bring visuals to life.",
+    img: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=400&q=80",
+  },
 ];
 
 const CARD_WIDTH = 240;
@@ -412,7 +412,7 @@ export default function AboutPage() {
                 }}
               >
                 <Image
-                  src="/reew3.jpg"
+                  src="/reew3.webp"
                   alt="Mishael Zabud"
                   fill
                   className="object-cover object-center"

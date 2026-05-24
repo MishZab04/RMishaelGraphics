@@ -11,6 +11,9 @@ import { useEffect, useRef, useState, useCallback } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { useTheme } from "next-themes";
 
+const normalizeToWebp = (src: string) =>
+  src.replace(/\.(jpe?g|png)$/i, ".webp");
+
 // ─────────────────────────────────────────────────────────────────────────────
 // HOW TO ADD YOUR IMAGES
 // ─────────────────────────────────────────────────────────────────────────────
@@ -80,8 +83,7 @@ const categories = [
     label: "Portraits & Enlargements",
     icon: "◈",
     accent: "#f59e0b",
-    description:
-      "High-quality portrait and photo enlargements.",
+    description: "High-quality portrait and photo enlargements.",
     images: [
       // ↓ Add your portrait images here
       "/portfolio/portrait/potrait1.jpg",
@@ -560,7 +562,8 @@ function CategorySection({
   const inView = useInView(ref, { once: true, margin: "-80px" });
   const [showAll, setShowAll] = useState(false);
 
-  const visible = showAll ? cat.images : cat.images.slice(0, 6);
+  const normalizedImages = cat.images.map(normalizeToWebp);
+  const visible = showAll ? normalizedImages : normalizedImages.slice(0, 6);
   const bg = isDark ? "#0d0f1e" : "#ffffff";
   const textMain = isDark ? "#f9fafb" : "#0f172a";
   const textMuted = isDark ? "#6b7280" : "#64748b";
@@ -647,7 +650,7 @@ function CategorySection({
               exit={{ opacity: 0, scale: 0.92 }}
               transition={{ duration: 0.4, delay: i * 0.04 }}
               whileHover={{ y: -4, scale: 1.02 }}
-              onClick={() => onImageClick(cat.images, i)}
+              onClick={() => onImageClick(normalizedImages, i)}
               className="group relative rounded-xl overflow-hidden cursor-zoom-in"
               style={{
                 aspectRatio: "3/4",

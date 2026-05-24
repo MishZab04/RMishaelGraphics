@@ -68,8 +68,7 @@ export default function Navbar() {
         const visible = entries
           .filter((entry) => entry.isIntersecting)
           .sort(
-            (a, b) =>
-              (b.intersectionRatio || 0) - (a.intersectionRatio || 0),
+            (a, b) => (b.intersectionRatio || 0) - (a.intersectionRatio || 0),
           );
 
         if (visible.length) {
@@ -126,7 +125,7 @@ export default function Navbar() {
         {/* LOGO */}
         <div className="flex items-center flex-shrink-0">
           <img
-            src={isDark ? "/blacklogo.PNG" : "/blue_logo.PNG"}
+            src={isDark ? "/blacklogo.webp" : "/blue_logo.webp"}
             alt="Logo"
             className={`h-48 md:h-56 lg:h-64 w-auto object-contain transition-all duration-300 hover:scale-105 hover:drop-shadow-[0_0_15px_rgba(59,130,246,0.8)] ${
               !isDark ? "brightness-0" : ""
@@ -143,7 +142,10 @@ export default function Navbar() {
                 onClick={(event) => {
                   event.preventDefault();
                   const target = document.getElementById(href.substring(1));
-                  target?.scrollIntoView({ behavior: "smooth", block: "start" });
+                  target?.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
                   setActive(href);
                 }}
                 className={`relative text-sm tracking-wide transition-colors duration-200 pb-1 group ${
@@ -219,7 +221,10 @@ export default function Navbar() {
                 onClick={(event) => {
                   event.preventDefault();
                   const target = document.getElementById(href.substring(1));
-                  target?.scrollIntoView({ behavior: "smooth", block: "start" });
+                  target?.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
                   setActive(href);
                   setOpen(false);
                 }}

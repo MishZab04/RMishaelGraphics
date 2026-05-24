@@ -155,7 +155,7 @@ export default function Home() {
             }`}
           >
             <Image
-              src="/reew.png"
+              src="/reeward.webp"
               alt="Mishael Zabud"
               width={600}
               height={750}
